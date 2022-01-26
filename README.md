@@ -3,6 +3,7 @@ An assignment implementing a “Course Registration System” server (JAVA) and 
 
 
 Client side:
+
   1) cd Client
   2) make clean
   3) make
@@ -11,6 +12,7 @@ Client side:
 
   
 Server side:
+  
   4) cd Server
   5) mvn clean
   6) mvn compile
