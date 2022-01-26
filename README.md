@@ -7,3 +7,9 @@ Client side:
   make
   cd bin
   ./program <host> <port>
+
+  
+Server side:
+  cd Server
+  mvn compile
+  
