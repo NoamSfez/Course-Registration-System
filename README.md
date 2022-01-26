@@ -19,6 +19,7 @@ Server side:
   7) Reactor server execute:
          mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.ReactorMain“ -Dexec.args=“<port> <number of thread>“
      or:
+  
      Thread per client server execute:
           mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.TPCMain“ -Dexec.args=“<port>“
   
