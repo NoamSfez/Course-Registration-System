@@ -2,7 +2,7 @@
 
 Implementation of a Course Registration system where a student can register for a course if he already completes dependent courses (prerequisites) and it remains places.
 The system follow a Client/Sever architecture with a C++ client and a Java server, that communicate using a custom binary protocol over TCP/IP.
-The server implementation illustrates the use of the [Reactor design pattern](https://www...).
+The server implementation illustrates the use of the [Reactor design pattern](https://en.wikipedia.org/wiki/Reactor_pattern).
 
 ## Client compilation:
 ```
