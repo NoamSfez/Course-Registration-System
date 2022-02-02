@@ -1,22 +1,35 @@
 # Course-Registration-System
-An assignment implementing a “Course Registration System” server (JAVA) and client (c++). Using Binary communication protocol, Thread-Per-Client (TPC) and  Reactor server.
 
+Implementation of a Course Registration system where a student can register for a course if he already completes dependent courses (prerequisites) and it remains places.
+The system follow a Client/Sever architecture with a C++ client and a Java server, that communicate using a custom binary protocol over TCP/IP.
+The server implementation illustrates the use of the [Reactor design pattern](https://www...).
 
-Client side:
+## Client compilation:
+```
+$ cd Client
+$ make clean
+$ make
+```
 
-1) cd Client
-2) make clean
-3) make
-8) cd bin
-9) ./BGRSclient <host> <port>
+## Server compilation:
+```
+$ cd ../Server/
+$ mvn clean
+$ mvn compile  
+```
 
-  
-Server side:
-  
-4) cd Server
-5) mvn clean
-6) mvn compile  
-7)Reactor server: mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.ReactorMain“ -Dexec.args=“<port> <number of thread>“
-or 7)Thread per client server: mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.TPCMain“ -Dexec.args=“<port>“
-  
-  
+## Launch Server:
+### Using Reactor server:
+```
+$ mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.ReactorMain“ -Dexec.args=“<port> <number of thread>“
+```
+### or using Thread per client server:
+```
+$ mvn exec:java -Dexec.mainClass=“bgu.spl.net.impl.BGRSServer.TPCMain“ -Dexec.args=“<port>“
+```
+
+## Launch Client:
+```
+$ cd ../Client/bin/
+$ ./BGRSclient <host> <port>
+```
